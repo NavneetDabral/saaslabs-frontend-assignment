@@ -1,5 +1,66 @@
 # Frontend Assignment
 
+A React application powered by Vite, TypeScript, and Vitest for testing.
+
+## 🚀 Getting Started
+
+### Prerequisites
+Ensure you have **Node.js** and **npm** installed.
+
+### Installation
+```sh
+npm install
+```
+
+### Development
+To start the development server:
+```sh
+npm run dev
+```
+
+### Build
+To compile the app:
+```sh
+npm run build
+```
+
+### Preview
+To preview the production build:
+```sh
+npm run preview
+```
+
+## 🧪 Testing
+### Run Tests
+Before running tests, Playwright will install the required browser binaries. The first run may take some time to complete.
+```sh
+npm run test
+```
+
+### Run Tests with Coverage
+```sh
+npm run coverage
+```
+
+
+## 🛠 Linting
+To check for linting issues:
+```sh
+npm run lint
+```
+
+## 📦 Dependencies
+- **React 19** for UI development
+- **Vite** for fast builds
+- **TypeScript** for type safety
+- **Vitest** for testing
+- **Playwright** for end-to-end browser testing
+- **ESLint** for code linting
+
+
+---------------------------------------------------------
+
+
 
 ## Assignment
 
