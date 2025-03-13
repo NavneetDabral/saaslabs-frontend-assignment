@@ -50,15 +50,27 @@ export const Pagination = ({
   const paginationHelperButtonsRequired = totalPages > 4;
 
   return (
-    <div className="pagination" onClick={handleClick}>
+    <nav
+      role="navigation"
+      aria-label="Pagination"
+      className="pagination"
+      onClick={handleClick}
+    >
       {paginationHelperButtonsRequired ? (
         <>
-          <button data-page="1" disabled={currentPage === 1}>
+          <button
+            data-page="1"
+            disabled={currentPage === 1}
+            aria-disabled={currentPage === 1}
+            aria-label="Go to first page"
+          >
             &lt;&lt;
           </button>
           <button
             data-page={(currentPage - 1).toString()}
             disabled={currentPage === 1}
+            aria-disabled={currentPage === 1}
+            aria-label="Go to previous page"
           >
             &lt;
           </button>
@@ -78,6 +90,7 @@ export const Pagination = ({
             data-page={typeof page === "number" ? page.toString() : undefined}
             disabled={page === "..."}
             className={page === currentPage ? "active" : ""}
+            aria-disabled={page === "..."}
           >
             {page}
           </button>
@@ -88,12 +101,16 @@ export const Pagination = ({
           <button
             data-page={(currentPage + 1).toString()}
             disabled={currentPage === totalPages}
+            aria-disabled={currentPage === totalPages}
+            aria-label="Go to next page"
           >
             &gt;
           </button>
           <button
             data-page={totalPages.toString()}
             disabled={currentPage === totalPages}
+            aria-disabled={currentPage === totalPages}
+            aria-label="Go to last page"
           >
             &gt;&gt;
           </button>
@@ -101,6 +118,6 @@ export const Pagination = ({
       ) : (
         <></>
       )}
-    </div>
+    </nav>
   );
 };

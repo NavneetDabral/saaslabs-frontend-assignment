@@ -11,7 +11,7 @@ const Table = <T,>({
 }: TableProps<T>) => {
   return (
     <div className="table-container">
-      <table className="custom-table">
+      <table className="custom-table" role="table" aria-label="Projects table">
         <thead>
           <tr>
             {columns.map((col) => (
