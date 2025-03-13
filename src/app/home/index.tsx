@@ -7,17 +7,21 @@ export const Home = () => {
 
   return (
     <div className="home">
-      <Table
-        data={paginatedData}
-        handlePageChange={(pageNumber: number) => setCurrentPage(pageNumber)}
-        currentPage={currentPage}
-        totalPages={totalPages}
-        columns={[
-          { key: "id", label: "S.No." },
-          { key: "percentageFunded", label: "Percentage Funded" },
-          { key: "amountPledged", label: "Amount Pledged" },
-        ]}
-      />
+      {paginatedData ? (
+        <Table
+          data={paginatedData}
+          handlePageChange={(pageNumber: number) => setCurrentPage(pageNumber)}
+          currentPage={currentPage}
+          totalPages={totalPages}
+          columns={[
+            { key: "id", label: "S.No." },
+            { key: "percentageFunded", label: "Percentage Funded" },
+            { key: "amountPledged", label: "Amount Pledged" },
+          ]}
+        />
+      ) : (
+        <>Loading</>
+      )}
     </div>
   );
 };
