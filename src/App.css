@@ -12,3 +12,9 @@
 .home {
   padding: 16px;
 }
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

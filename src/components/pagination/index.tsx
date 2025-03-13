@@ -1,18 +1,13 @@
+import { PaginationProps } from "../../schemas/data";
 import { useIsMobile } from "../../utility/useIsMobile";
 import "./pagination.css";
 import { useState, useEffect } from "react";
 
-interface PaginationProps {
-  totalPages: number;
-  currentPage?: number;
-  onPageChange: (page: number) => void;
-}
-
-export const Pagination: React.FC<PaginationProps> = ({
+export const Pagination = ({
   totalPages,
   currentPage = 1,
   onPageChange,
-}) => {
+}: PaginationProps) => {
   const [range, setRange] = useState<(number | "...")[]>([]);
   const START = 1;
   const END = totalPages;

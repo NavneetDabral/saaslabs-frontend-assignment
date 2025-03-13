@@ -1,13 +1,6 @@
+import { TableProps } from "../../schemas/data";
 import { Pagination } from "../pagination";
 import "./table.css";
-
-interface TableProps<T> {
-  data: T[];
-  columns: { key: keyof T; label: string }[];
-  handlePageChange: (page: number) => void;
-  currentPage: number;
-  totalPages: number;
-}
 
 const Table = <T,>({
   data,
